@@ -1,7 +1,7 @@
 {
   "description": "Explore a modern portfolio showcasing a UI/UX designer, web developer, and data analyst’s skills, projects, and experience.",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,
