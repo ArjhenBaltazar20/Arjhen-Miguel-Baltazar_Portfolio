@@ -28,6 +28,18 @@ const skills = [
     note: "I use data to ask better questions and explain patterns.",
     tools: ["SQL", "Data cleaning", "Dashboards", "Insights"],
   },
+  {
+    number: "04",
+    title: "Tools & Platforms",
+    note: "I version my work and use AI tools to prototype and debug faster.",
+    tools: ["Git/GitHub", "VS Code", "Claude", "ChatGPT", "Cursor", "GitHub Copilot"],
+  },
+  {
+    number: "05",
+    title: "Design & Digital Media",
+    note: "I keep visuals consistent, lightweight, and ready to ship.",
+    tools: ["Layout prototyping", "UI design systems", "Asset optimization", "Vector icons"],
+  },
 ];
 
 const certificates = [
@@ -333,6 +345,20 @@ function ProjectCaseStudy({
               <span key={tag}>{tag}</span>
             ))}
           </div>
+          <p className="repo-note">
+            <span aria-hidden="true">🔒</span>
+            <span>
+              <strong>Source code:</strong> This repository is private.{" "}
+              <a
+                href={`mailto:arjhennmiguelbaltazar@gmail.com?subject=${encodeURIComponent(
+                  `Repository access request: ${project.title}`,
+                )}`}
+              >
+                Make a request for access
+              </a>
+              .
+            </span>
+          </p>
         </div>
         <a className="project-link" href="#contact">
           Ask me about this project <ArrowIcon diagonal />
@@ -560,7 +586,7 @@ function App() {
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <div className="header-inner">
           <a
-            aria-label="Arjhen Baltazar, home"
+            aria-label="Arjhen Miguel Baltazar, home"
             className="brand"
             href="#top"
             onClick={() => setMenuOpen(false)}
@@ -569,7 +595,7 @@ function App() {
               <img alt="" src="/assets/arjhen-formal.webp" />
             </span>
             <span className="brand-copy">
-              <strong>Arjhen Baltazar</strong>
+              <strong>Arjhen Miguel Baltazar</strong>
               <small>Design · Code · Data</small>
             </span>
           </a>
@@ -632,17 +658,19 @@ function App() {
             <div className="hero-copy" data-reveal>
               <div className="availability-pill">
                 <span className="status-dot" />
-                Seeking 2026 internship opportunities
+                Available for OJT · 2nd Semester, Nov 2026 – Apr 2027
               </div>
-              <p className="eyebrow">IT graduate · multidisciplinary creative</p>
+              <p className="eyebrow">
+                UI/UX Designer · Web Developer · Data Analyst Intern
+              </p>
               <h1>
-                Learning fagst.
+                Learning fast.
                 <br />
                 Building with <span className="scribble">purpose.</span>
               </h1>
               <p className="hero-intro">
-                Hi, I&apos;m Arjhen. I&apos;m an aspiring UI/UX designer, web developer, and data
-                analyst who turns curiosity into thoughtful digital work.
+                Hi, I&apos;m <strong>Arjhen Miguel Baltazar</strong>, an aspiring UI/UX designer,
+                web developer, and data analyst who turns curiosity into thoughtful digital work.
               </p>
               <div className="hero-actions">
                 <a className="button button-primary magnetic" href="#work">
@@ -660,18 +688,18 @@ function App() {
                   Download CV <ArrowIcon diagonal />
                 </a>
               </div>
-              <div className="hero-proof">
+              <div className="hero-proof" aria-label="Internship details">
+                <div>
+                  <strong>600 hrs</strong>
+                  <span>target training hours</span>
+                </div>
+                <div>
+                  <strong>Nov–Apr</strong>
+                  <span>2nd Semester, 2026–2027</span>
+                </div>
                 <div>
                   <strong>3</strong>
-                  <span>creative disciplines</span>
-                </div>
-                <div>
-                  <strong>100%</strong>
-                  <span>ready to learn</span>
-                </div>
-                <div>
-                  <strong>∞</strong>
-                  <span>curiosity level</span>
+                  <span>target roles</span>
                 </div>
               </div>
             </div>
@@ -764,20 +792,57 @@ function App() {
               </div>
               <div className="intro-content" data-reveal>
                 <p className="lead">
-                  I&apos;m a BS Information Technology graduate who likes the space where
+                  I&apos;m a Computer Technology student at the College of Industrial Technology
+                  who likes the space where
                   <strong> design, technology, and real people meet.</strong>
                 </p>
                 <p>
-                  I don&apos;t pretend to know everything. I bring a strong learning mindset,
-                  careful attention to detail, and the confidence to ask good questions. I&apos;m
-                  looking for an internship where I can contribute, learn from experienced
-                  teammates, and grow into the kind of professional people enjoy building with.
+                  At CIT, I&apos;ve designed, built, and analyzed academic systems, from Figma
+                  prototypes and responsive web apps to Android tools and embedded prototypes. I
+                  work with care, take feedback well, and finish what I start. As an OJT intern, I
+                  want to help a partner company ship clear, usable interfaces and make sense of its
+                  data, while learning from experienced teammates.
                 </p>
-                <div className="value-chips">
-                  <span>Easy to teach</span>
-                  <span>Thoughtful collaborator</span>
-                  <span>Detail-aware</span>
-                  <span>Feedback-friendly</span>
+
+                <dl className="academic-card" aria-label="Academic background">
+                  <div>
+                    <dt>Degree</dt>
+                    <dd>Bachelor of Industrial Technology</dd>
+                  </div>
+                  <div>
+                    <dt>Major</dt>
+                    <dd>Computer Technology</dd>
+                  </div>
+                  <div>
+                    <dt>Institution</dt>
+                    <dd>Bulacan State University – College of Industrial Technology</dd>
+                  </div>
+                  <div>
+                    <dt>Expected graduation</dt>
+                    <dd>2027</dd>
+                  </div>
+                </dl>
+
+                <div className="competencies">
+                  <span className="competencies-label">Core competencies</span>
+                  <ul>
+                    <li>
+                      <strong>UI/UX prototyping:</strong> turning requirements into user flows,
+                      wireframes, and Figma prototypes
+                    </li>
+                    <li>
+                      <strong>Responsive front-end development:</strong> building and debugging
+                      interfaces with React, HTML, CSS, and JavaScript
+                    </li>
+                    <li>
+                      <strong>Data analysis with SQL:</strong> cleaning data and turning queries into
+                      clear insights
+                    </li>
+                    <li>
+                      <strong>AI-assisted development and version control:</strong> rapid
+                      prototyping with AI tools and managing code with Git/GitHub
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -840,6 +905,7 @@ function App() {
               <div className="skills-intro" data-reveal>
                 <p className="hand-note">a useful mix</p>
                 <h2>Three lenses. One growing toolkit.</h2>
+                <p className="skills-note">Plus the tools and design craft behind them.</p>
                 <p>
                   I can think about the user, understand the implementation, and stay curious about
                   what the data says.
@@ -916,7 +982,9 @@ function App() {
         <section className="contact-section" id="contact">
           <div className="contact-noise" />
           <div className="container contact-inner" data-reveal>
-            <p className="contact-kicker">YOUR NEXT INTERN COULD BE RIGHT HERE</p>
+            <p className="contact-kicker">
+              INTERESTED IN BRINGING ME ONTO YOUR TEAM FOR OJT? LET&apos;S CONNECT.
+            </p>
             <h2>
               Let&apos;s turn my potential
               <br />
@@ -932,9 +1000,39 @@ function App() {
             >
               Start a conversation <ArrowIcon diagonal />
             </a>
+            <dl className="contact-details" aria-label="Quick contact details">
+              <div>
+                <dt>Email</dt>
+                <dd>
+                  <a href="mailto:arjhennmiguelbaltazar@gmail.com">
+                    arjhennmiguelbaltazar@gmail.com
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt>LinkedIn</dt>
+                <dd>
+                  <a href="https://www.linkedin.com/in/arjhen-baltazar" rel="noreferrer" target="_blank">
+                    linkedin.com/in/arjhen-baltazar
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt>GitHub</dt>
+                <dd>
+                  <a href="https://github.com/ArjhenBaltazar20" rel="noreferrer" target="_blank">
+                    github.com/ArjhenBaltazar20
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt>Preferred deployment</dt>
+                <dd>Malolos / Bulacan / Metro Manila / Pampanga / Remote</dd>
+              </div>
+            </dl>
             <div className="contact-footer">
-              <span>Available for internships</span>
-              <span>Philippines · Open to remote</span>
+              <span>Available for OJT · 600 hours</span>
+              <span>2nd Semester · Nov 2026 – Apr 2027</span>
               <span>Replies with coffee in hand</span>
             </div>
           </div>
@@ -982,11 +1080,14 @@ function App() {
           <a className="brand footer-brand" href="#top">
             <span className="brand-mark">AB</span>
             <span className="brand-copy">
-              <strong>Arjhen Baltazar</strong>
+              <strong>Arjhen Miguel Baltazar</strong>
               <small>Design · Code · Data</small>
             </span>
           </a>
-          <p>Designed with curiosity. Built with care. © {new Date().getFullYear()}</p>
+          <div className="footer-legal">
+            <p>© 2026 Arjhen Miguel Baltazar. All Rights Reserved.</p>
+            <p>College of Industrial Technology, Bulacan State University</p>
+          </div>
           <a className="back-top" href="#top">
             Back to top <span>↑</span>
           </a>

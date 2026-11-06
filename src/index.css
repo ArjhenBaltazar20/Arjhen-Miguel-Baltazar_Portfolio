@@ -3079,3 +3079,180 @@
     display: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Internship checklist additions: academics, competencies, repo note,
+   contact details, footer legal
+   --------------------------------------------------------------------------- */
+
+.academic-card {
+  display: grid;
+  max-width: 680px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin: 28px 0 0;
+  background: var(--card);
+  box-shadow: 0 14px 36px var(--shadow);
+  gap: 14px 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  backdrop-filter: blur(12px);
+}
+
+.academic-card div {
+  min-width: 0;
+}
+
+.academic-card dt,
+.competencies-label,
+.contact-details dt {
+  color: var(--primary);
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.academic-card dd {
+  margin: 5px 0 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.competencies {
+  max-width: 680px;
+  margin-top: 28px;
+}
+
+.competencies ul {
+  display: grid;
+  padding: 0;
+  margin: 12px 0 0;
+  gap: 10px;
+  list-style: none;
+}
+
+.competencies li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.competencies li::before {
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sky);
+  content: "";
+}
+
+.competencies li strong {
+  color: var(--ink);
+}
+
+.skills-note {
+  margin: 18px 0 0;
+  color: var(--primary);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.repo-note {
+  display: flex;
+  max-width: 520px;
+  padding: 12px 14px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  margin: 18px 0 0;
+  align-items: flex-start;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+  gap: 9px;
+}
+
+.repo-note strong {
+  color: var(--ink);
+}
+
+.repo-note a {
+  color: var(--primary);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.contact-details {
+  display: grid;
+  max-width: 900px;
+  margin: 48px auto 0;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  text-align: left;
+}
+
+.contact-details div {
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid rgba(245, 237, 237, 0.14);
+  border-radius: 14px;
+  background: rgba(245, 237, 237, 0.04);
+}
+
+.contact-details dt {
+  color: #a0e0ef;
+}
+
+.contact-details dd {
+  margin: 7px 0 0;
+  color: #f5eded;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.contact-details a {
+  color: #f5eded;
+  text-decoration: underline;
+  text-decoration-color: rgba(160, 224, 239, 0.5);
+  text-underline-offset: 3px;
+}
+
+.contact-details a:hover {
+  color: #60c1e5;
+}
+
+.footer-legal {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+}
+
+.footer-legal p {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .contact-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .academic-card,
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-legal {
+    text-align: left;
+  }
+}
