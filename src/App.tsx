@@ -1078,10 +1078,10 @@ function App() {
         </div>
         <div className="container footer-inner">
           <a className="brand footer-brand" href="#top">
-            <span className="brand-mark">AB</span>
+            <img alt="" className="footer-logo" height="40" src="/favicon.svg" width="40" />
             <span className="brand-copy">
               <strong>Arjhen Miguel Baltazar</strong>
-              <small>Design · Code · Data</small>
+              <small>Tri-Lens · Design · Code · Data</small>
             </span>
           </a>
           <div className="footer-legal">
